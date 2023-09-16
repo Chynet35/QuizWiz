@@ -14,9 +14,9 @@ app.config['UPLOAD_FOLDER'] = 'static'  # This tells Flask where to find static 
 
 API_URL = "https://opentdb.com/api.php"  # Centralize API URL
 
-@app.route('/static/<path:filename>')  # Add this route to serve static files
-def serve_static(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+#@app.route('/static/<path:filename>')  # Add this route to serve static files
+#def serve_static(filename):
+ #   return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
 @app.route("/")

@@ -10,9 +10,16 @@
   <script src="{{url_for('static', filename='node.js')}}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Add this code to display the logo -->
-  <img src="{{ url_for('static', filename='quiz-logo.png') }}" alt="Your Logo Alt Text">
-
+  
+  <!-- Add this style within the <style> tags in your index.html file -->
+    <style>
+        .background-image {
+            background-image:"{{ url_for('static', filename='quiz-logo.png') }}";
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
  
   <title>Welcome</title>
 </head>
@@ -20,15 +27,6 @@
     <!-- Set the background image here -->
     <div class="background-image"></div>
     
-    <!-- Add this style within the <style> tags in your index.html file -->
-    <style>
-        body {
-            
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-    </style>
 
     <!--Container Main start-->
     <div class="height-100 bg-light">
