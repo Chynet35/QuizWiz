@@ -1,14 +1,22 @@
-from flask import Flask, url_for, render_template, redirect, request, flash, session
+from flask import Flask, send_from_directory, url_for, render_template, redirect, request, flash, session
 import requests
 import json
 import urllib.parse
 from datetime import timedelta
+import os  # Import the 'os' module
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=10)  # Set session lifetime
 
+app.config['UPLOAD_FOLDER'] = 'static'  # This tells Flask where to find static files
+
+
 API_URL = "https://opentdb.com/api.php"  # Centralize API URL
+
+@app.route('/static/<path:filename>')  # Add this route to serve static files
+def serve_static(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
 @app.route("/")
