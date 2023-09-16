@@ -41,9 +41,9 @@ jupyter-events==0.6.3
 jupyter_client
 jupyter_core
 jupyter_server
-jupyter_server_terminals==0.4.4
-jupyterlab-pygments==0.2.2
-jupyterlab-widgets==3.0.7
+jupyter_server_terminals
+jupyterlab-pygments
+jupyterlab-widgets
 MarkupSafe==2.1.2
 matplotlib-inline==0.1.6
 mistune==2.0.5
