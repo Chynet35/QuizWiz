@@ -70,7 +70,7 @@ Pygments
 pyrsistent
 python-dateutil
 python-json-logger
-pywin32
+pywin32==300; sys_platform == 'win32'
 pywinpty
 PyYAML
 pyzmq
